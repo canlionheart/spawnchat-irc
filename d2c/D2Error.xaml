@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="d2c.D2Error"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="373" d:DesignWidth="373" FontFamily="/d2c;component\#Exocet" FontSize="20" Foreground="#FF948064">
+    <Grid>
+        <Viewbox>
+            <Canvas x:Name="canBlank" Height="373" Width="373">
+                <TextBlock x:Name="tbError" Canvas.Left="21" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="44" Height="293" Width="328"/>
+            </Canvas>
+        </Viewbox>
+    </Grid>
+</UserControl>

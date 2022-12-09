@@ -1,0 +1,17 @@
+﻿<Window x:Class="SChat.DError"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Diablo" Height="149" Width="276" WindowStyle="None" Background="{x:Null}" Foreground="White" Icon="img/icons/icon_d1.png" ShowInTaskbar="False" ResizeMode="NoResize"  WindowStartupLocation="CenterScreen" Topmost="True">
+    <Grid Margin="4">
+        <Viewbox x:Name="vbox" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Uniform">
+            <Canvas x:Name="canErr" HorizontalAlignment="Left" Height="144" VerticalAlignment="Top" Width="281">
+                <Canvas.Background>
+                    <ImageBrush ImageSource="img/glues/drtl/bgDError.png" Stretch="Uniform"/>
+                </Canvas.Background>
+                <TextBlock x:Name="lblErrormsg" TextWrapping="Wrap" Canvas.Left="10" Canvas.Top="10" Width="261" Height="96" FontFamily="Verdana" FontSize="14"/>
+                <Image x:Name="btnOK" Source="img/glues/drtl/btnDError.png"  PreviewMouseDown="btnOK_PreviewMouseDown" MouseUp="btnOK_Click" Height="28" Canvas.Left="85" Canvas.Top="106" Width="110"/>
+                <Label x:Name="lblBtnOK" Content="OK" Foreground="White" FontSize="14"   PreviewMouseDown="btnOK_PreviewMouseDown" MouseUp="btnOK_Click" Canvas.Left="126" Canvas.Top="105"/>
+            </Canvas>
+        </Viewbox>
+    </Grid>
+</Window>

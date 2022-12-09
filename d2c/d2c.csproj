@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF18C301-D8E8-4454-B280-A47C82F72B76}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>d2c</RootNamespace>
+    <AssemblyName>d2c</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WpfAnimatedGif">
+      <HintPath>..\packages\WpfAnimatedGif.1.4.14\lib\net\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="d2avatar.cs" />
+    <Compile Include="d2AvatarGenerator.cs" />
+    <Compile Include="D2Error.xaml.cs">
+      <DependentUpon>D2Error.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="D2BlankPanel.xaml.cs">
+      <DependentUpon>D2BlankPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="D2MusicPlayer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\am\hd\AMHDCAPTN1HT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\am\hd\amhdlittn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\am\la\amlalittn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\am\la\amlamedtn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\am\lg\amlglittn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\am\lg\amlgmedtn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\am\ra\amralittn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\am\ra\amramedtn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\am\rh\amrhjavtn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\am\s1\ams1littn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\am\s1\ams1medtn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\am\s2\ams2littn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\am\s2\ams2medtn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\am\sh\amshbuctn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\am\tr\amtrlittn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\am\tr\amtrmedtn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\BA\HD\bahdlitTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\BA\LA\balalitTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\BA\LA\balamedTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\BA\LG\balglitTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\BA\LG\balgmedTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\BA\RA\baralitTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\BA\RA\baramedTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\BA\rh\barhjavtn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\BA\S1\bas1litTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\BA\S1\bas1medTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\BA\s2\bas2litTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\BA\s2\bas2medTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\BA\sh\bashbuctn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\BA\TR\batrlitTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\BA\TR\batrmedTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\d2ignore.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\d2select.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\ne\HD\NEHDCAPTNhth.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\ne\HD\NEhdlittnhth.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\ne\la\NElalitTN1HT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\ne\la\NElamedTN1HT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\ne\lg\NElglitTN1HT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\ne\lg\NElgmedTN1HT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\ne\ra\NEralitTN1HT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\ne\ra\NEramedTN1HT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\ne\rh\NErhjavTN1HT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\ne\s1\NEs1litTN1HT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\ne\s1\NEs1medTN1HT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\ne\s2\NEs2litTN1HT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\ne\s2\NEs2medTN1HT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\ne\sh\NEshbucTN1HT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\ne\tr\NEtrlitTN1HT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\ne\tr\NEtrmedTN1HT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\or\CHAT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\or\DEAD.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\or\DRTL.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\or\OPEN.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\or\OPER.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\or\SEXP.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\or\SPKR.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\or\STAR.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\or\W2BN.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\or\WAR3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\SO\HD\SOhdlitTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\SO\LA\SOlalitTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\SO\LA\SOlamedTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\SO\LG\SOlglitTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\SO\LG\SOlgmedTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\SO\RA\SOralitTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\SO\RA\SOramedTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\SO\rh\sorhjavtn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\SO\s1\SOs1litTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\SO\s1\SOs1medTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\SO\s2\SOs2litTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\SO\s2\SOs2medTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\SO\sh\soshbuctn1ht.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\SO\TR\SOtrlitTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\SO\TR\SOtrmedTNHTH.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\glues\d2dv\bgD2chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="D2Error.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="D2BlankPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SCommon\SCommon.csproj">
+      <Project>{c45be1e6-f46b-4c07-a0c4-9fdd6a547f0d}</Project>
+      <Name>SCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Exocet.ttf" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="char\PA\HD\PAHDLITTN1HS.gif" />
+    <Resource Include="char\PA\LA\PALAlitTN1hs.gif" />
+    <Resource Include="char\PA\LA\PALAmedTN1hs.gif" />
+    <Resource Include="char\PA\LG\PAlglitTN1hs.gif" />
+    <Resource Include="char\PA\LG\PAlgmedTN1hs.gif" />
+    <Resource Include="char\PA\RA\PAralitTNHTH.gif" />
+    <Resource Include="char\PA\RA\PAramedTNHTH.gif" />
+    <Resource Include="char\PA\s1\PAs1litTN1hs.gif" />
+    <Resource Include="char\PA\s1\PAs1medTN1hs.gif" />
+    <Resource Include="char\PA\s2\PAs2litTN1hs.gif" />
+    <Resource Include="char\PA\s2\PAs2medTN1hs.gif" />
+    <Resource Include="char\PA\TR\PATRlittn1hs.gif" />
+    <Resource Include="char\PA\TR\PATRmedtn1hs.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\glues\d2dv\bgD2blank.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

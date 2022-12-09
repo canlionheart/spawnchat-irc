@@ -1,0 +1,73 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:SChat" x:Class="SChat.SSettingsWindow"
+        Title="SpawnChat" Height="516" Width="650" ShowInTaskbar="False" Background="Black" Foreground="White" WindowStartupLocation="CenterOwner" Icon="img/icons/icon_s0.png">
+    <Window.Resources>
+        <DataTemplate x:Key="DataTemplateItem">
+            <Canvas Width="208" Height="14">
+                <Image Source="{Binding PictureString}" Height="14" Width="28" Canvas.Left="0" Canvas.Top="0"/>
+                <TextBlock Text="{Binding Name}" Canvas.Left="30" Canvas.Top="0" Width="172"/>
+            </Canvas>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid Margin="4">
+        <Viewbox x:Name="vBox" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" Stretch="Uniform">
+            <Canvas x:Name="canSettings" Height="480" Width="640">
+                <Canvas.Background>
+                    <ImageBrush ImageSource="img/glues/star/bgSSettings.png"/>
+                </Canvas.Background>
+                <Label x:Name="lblChan" Content="Settings" VerticalAlignment="Top" Height="32" Width="89" Background="{x:Null}" Foreground="White" HorizontalAlignment="Left" FontSize="18" Canvas.Left="115" Canvas.Top="146" FontFamily="Verdana"/>
+                <CheckBox x:Name="chkAutoconnect" Content="Autoconnect&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" BorderBrush="#FFFFDC00" BorderThickness="3" FontFamily="Verdana" FontSize="14" Background="#FFFFAE00" Checked="chkAutoconnect_Checked" Height="34" Width="111" Canvas.Left="37" Canvas.Top="237" ToolTip="Connects with your last used settings when you start SpawnChat."/>
+                <CheckBox x:Name="chkELnotif" Content="Join/Leave notification" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" BorderBrush="#FFFFDC00" BorderThickness="3" FontFamily="Verdana" FontSize="14" Background="#FFFFAE00" ToolTip=" ALT-V in chat window to toggle" Checked="chkELnotif_Checked" Height="19" Width="182" Canvas.Left="37" Canvas.Top="305"/>
+                <CheckBox x:Name="chkTSpawn" Content="SpawnChat" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" BorderBrush="#FFFFDC00" BorderThickness="3" FontFamily="Verdana" FontSize="14" Background="#FFFFAE00" Height="19" Width="117" Canvas.Left="31" Canvas.Top="435" Checked="chkTSpawn_Checked" Unchecked="chkTSpawn_Unchecked"/>
+                <Label x:Name="lblTitle" Content="Window Title:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Verdana" Foreground="White" FontSize="16" Height="29" Width="120" Canvas.Left="36" Canvas.Top="402"/>
+                <CheckBox x:Name="chkFullscreen" Content="Fullscreen" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" BorderBrush="#FFFFDC00" BorderThickness="3" FontFamily="Verdana" FontSize="14" Background="#FFFFAE00" ToolTip="Key command: Alt-Enter" Height="19" Width="94" Canvas.Left="37" Canvas.Top="341"/>
+                <CheckBox x:Name="chkTime" Content="Show timestamps" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" BorderBrush="#FFFFDC00" BorderThickness="3" FontFamily="Verdana" FontSize="14" Background="#FFFFAE00" ToolTip="Key command: Alt-T" Height="19" Width="242" Canvas.Left="37" Canvas.Top="375"/>
+                <CheckBox x:Name="chkTGame" Content="Game" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" BorderBrush="#FFFFDC00" BorderThickness="3" FontFamily="Verdana" FontSize="14" Background="#FFFFAE00" Height="19" Width="117" Canvas.Left="152" Canvas.Top="435" Checked="chkTGame_Checked" Unchecked="chkTGame_Unchecked"/>
+                <Label x:Name="lblAvatar" Content="Avatar" VerticalAlignment="Top" Height="32" Width="77" Background="{x:Null}" Foreground="White" HorizontalAlignment="Left" FontSize="18" Canvas.Left="437" Canvas.Top="146" FontFamily="Verdana"/>
+                <Label x:Name="lblDClass" Content="Character" VerticalAlignment="Top" Height="32" Width="89" Background="{x:Null}" Foreground="White" HorizontalAlignment="Left" FontSize="14" Canvas.Left="364" Canvas.Top="200" FontFamily="Verdana"/>
+                <Label x:Name="lblWins" Content="Wins" VerticalAlignment="Top" Height="32" Width="151" Background="{x:Null}" Foreground="White" HorizontalAlignment="Left" FontSize="14" Canvas.Left="489" Canvas.Top="200" FontFamily="Verdana"/>
+                <Label x:Name="lblPreview" Content="Preview" VerticalAlignment="Top" Height="32" Width="89" Background="{x:Null}" Foreground="White" HorizontalAlignment="Left" FontSize="14" Canvas.Left="399" Canvas.Top="284" FontFamily="Verdana"/>
+                <Image x:Name="imgAvPreview" Height="14" Canvas.Left="475" Canvas.Top="292" Width="28"/>
+                <ComboBox x:Name="cBoxDClass" Canvas.Left="364" Canvas.Top="237" Width="103" Height="22" Foreground="Black" BorderBrush="#FFFFDC00" Background="Black" FontFamily="Verdana" SelectionChanged="cBoxDClass_SelectionChanged" SelectedIndex="0">
+                    <ListBoxItem Content="Shareware"/>
+                    <ListBoxItem Content="Spawn"/>
+                    <ListBoxItem Content="Normal"/>
+                    <ListBoxItem Content="Space"/>
+                    <ListBoxItem Content="Ranked"/>
+                </ComboBox>
+
+                <CheckBox x:Name="chkExit" Content="Exit on closing chat window&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" BorderBrush="#FFFFDC00" BorderThickness="3" FontFamily="Verdana" FontSize="14" Background="#FFFFAE00" Checked="chkAutoconnect_Checked" Height="34" Width="222" Canvas.Left="37" Canvas.Top="271"/>
+                <Image x:Name="btnOK" Source="img/glues/star/btnSChat.png"  PreviewMouseDown="btnOK_PreviewMouseDown" MouseUp="btnOK_Click" Height="35" Canvas.Left="447" Canvas.Top="440" Width="85" Stretch="Fill"/>
+                <Label x:Name="lblBtnOK" Content="OK" Foreground="White" FontSize="14"   PreviewMouseDown="btnOK_PreviewMouseDown" MouseUp="btnOK_Click" Canvas.Left="474" Canvas.Top="444"/>
+                <Image x:Name="btnCancel" Source="img/glues/star/btnSChat.png"   PreviewMouseDown="btnCancel_PreviewMouseDown" MouseUp="btnCancel_Click" Height="35" Canvas.Left="536" Canvas.Top="440" Width="85" Stretch="Fill"/>
+                <Label x:Name="lblBtnCancel" Content="Cancel" Foreground="White" FontSize="14"   PreviewMouseDown="btnCancel_PreviewMouseDown" MouseUp="btnCancel_Click" Canvas.Left="554" Canvas.Top="443"/>
+                <ComboBox x:Name="cboxWins" Canvas.Left="489" Canvas.Top="237" Width="40" SelectedIndex="0" FontFamily="Verdana" SelectionChanged="cboxWins_SelectionChanged">
+                    <ListBoxItem Content="0"/>
+                    <ListBoxItem Content="1"/>
+                    <ListBoxItem Content="2"/>
+                    <ListBoxItem Content="3"/>
+                    <ListBoxItem Content="4"/>
+                    <ListBoxItem Content="5"/>
+                    <ListBoxItem Content="6"/>
+                    <ListBoxItem Content="7"/>
+                    <ListBoxItem Content="8"/>
+                    <ListBoxItem Content="9"/>
+                    <ListBoxItem Content="10"/>
+                </ComboBox>
+                <Label x:Name="lblIcon" Content="Icon" VerticalAlignment="Top" Height="32" Width="60" Background="{x:Null}" Foreground="White" HorizontalAlignment="Left" FontSize="14" Canvas.Left="340" Canvas.Top="339" FontFamily="Verdana"/>
+                <ComboBox x:Name="cboxIcon" Canvas.Left="390" Canvas.Top="343" Width="40" SelectedIndex="0" FontFamily="Verdana" SelectionChanged="cboxIcon_SelectionChanged">
+                    <ListBoxItem Content="0"/>
+                    <ListBoxItem Content="1"/>
+                    <ListBoxItem Content="2"/>
+                    <ListBoxItem Content="3"/>
+                </ComboBox>
+                <Image x:Name="imgIconPreview" Height="37" Canvas.Left="447" Canvas.Top="334" Width="37"/>
+                <CheckBox x:Name="chkAds" Content="Show banner ads" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" BorderBrush="#FFFFDC00" BorderThickness="3" FontFamily="Verdana" FontSize="14" Background="#FFFFAE00" Height="19" Width="242" Canvas.Left="148" Canvas.Top="341"/>
+            </Canvas>
+        </Viewbox>
+
+    </Grid>
+</Window>

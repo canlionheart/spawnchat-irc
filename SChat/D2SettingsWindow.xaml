@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="SChat.D2SettingsWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="373" d:DesignWidth="373" FontFamily="/d2c;component\#Exocet" FontSize="16" Foreground="#FF948064">
+    <Grid>
+        <Viewbox>
+            <Canvas x:Name="canSettings" Height="373" Width="373" >
+                <Label x:Name="lblChan" Content="SETTINGS" HorizontalContentAlignment="Center" VerticalAlignment="Top" Height="32" Width="348" Background="{x:Null}" Foreground="#FF948064" HorizontalAlignment="Left" FontSize="20" Canvas.Left="10" Canvas.Top="10" FontFamily="/d2c;component\#Exocet"/>
+                <CheckBox x:Name="chkAutoconnect" Content="Autoconnect" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF948064" BorderBrush="#FFFFDC00" BorderThickness="3" Background="#FFFFAE00" Checked="chkAutoconnect_Checked" Height="23" Width="168" Canvas.Left="13" Canvas.Top="60" ToolTip="Connects with your last used settings when you start SpawnChat."/>
+                <CheckBox x:Name="chkELnotif" Content="Join/Leave notification" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF948064" BorderBrush="#FFFFDC00" BorderThickness="3"  
+                          Background="#FFFFAE00" ToolTip=" ALT-V in chat window to toggle" Checked="chkELnotif_Checked" Height="19" Width="283" Canvas.Left="13" Canvas.Top="128"/>
+                <CheckBox x:Name="chkTSpawn" Content="SpawnChat" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF948064" BorderBrush="#FFFFDC00" BorderThickness="3"   Background="#FFFFAE00" Height="19" Width="144" Canvas.Left="7" Canvas.Top="284" Checked="chkTSpawn_Checked" Unchecked="chkTSpawn_Unchecked"/>
+                <Label x:Name="lblTitle" Content="Window Title:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF948064" FontSize="16" Height="29" Width="160" Canvas.Left="12" Canvas.Top="255"/>
+                <CheckBox x:Name="chkFullscreen" Content="Fullscreen" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF948064" BorderBrush="#FFFFDC00" BorderThickness="3"  Background="#FFFFAE00" ToolTip="Key command: Alt-Enter" Height="19" Width="142" Canvas.Left="13" Canvas.Top="164"/>
+                <CheckBox x:Name="chkTime" Content="Show timestamps" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF948064" BorderBrush="#FFFFDC00" BorderThickness="3"   Background="#FFFFAE00" ToolTip="Key command: Alt-T" Height="19" Width="203" Canvas.Left="13" Canvas.Top="198"/>
+                <CheckBox x:Name="chkTGame" Content="Game" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF948064" BorderBrush="#FFFFDC00" BorderThickness="3"   Background="#FFFFAE00" Height="19" Width="117" Canvas.Left="156" Canvas.Top="284" Checked="chkTGame_Checked" Unchecked="chkTGame_Unchecked"/>
+
+                <CheckBox x:Name="chkExit" Content="Exit on closing chat window" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF948064" BorderBrush="#FFFFDC00" BorderThickness="3" Background="#FFFFAE00" Checked="chkAutoconnect_Checked" Height="34" Width="333" Canvas.Left="13" Canvas.Top="94"/>
+                <Image x:Name="btnOK" Source="img/glues/d2dv/btnD2Menu.png"  PreviewMouseDown="btnOK_PreviewMouseDown" MouseUp="btnOK_Click" Height="32" Canvas.Left="262" Canvas.Top="326" Width="96" Stretch="Fill"/>
+                <Label x:Name="lblBtnOK" Content="OK" Foreground="Black"    PreviewMouseDown="btnOK_PreviewMouseDown" MouseUp="btnOK_Click" Canvas.Left="296" Canvas.Top="326" FontFamily="/d2c;component\#Exocet" RenderTransformOrigin="0.714,0.143" FontSize="16"/>
+                <Image x:Name="btnCancel" Source="img/glues/d2dv/btnD2Menu.png"   PreviewMouseDown="btnCancel_PreviewMouseDown" MouseUp="btnCancel_Click" Height="32" Canvas.Left="18" Canvas.Top="326" Width="96" Stretch="Fill"/>
+                <Label x:Name="lblBtnCancel" Content="Cancel" Foreground="Black"    PreviewMouseDown="btnCancel_PreviewMouseDown" MouseUp="btnCancel_Click" Canvas.Left="28" Canvas.Top="326" FontFamily="/d2c;component\#Exocet" Width="84" FontSize="16"/>
+                <Label x:Name="lblIcon" Content="Icon" VerticalAlignment="Top" Height="32" Width="60" Background="{x:Null}" Foreground="#FF948064" HorizontalAlignment="Left"  Canvas.Left="264" Canvas.Top="172"/>
+                <Image x:Name="imgIconPreview_D2" Height="37" Canvas.Left="284" Canvas.Top="199" Width="37" Source="img/icons/icon_d2.png"/>
+                <CheckBox x:Name="chkAds" Content="Show banner ads" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF948064" BorderBrush="#FFFFDC00" BorderThickness="3"  Background="#FFFFAE00" Height="19" Width="242" Canvas.Left="13" Canvas.Top="235"/>
+                <RadioButton x:Name="radIconD2" Content="" GroupName="d2icon" Canvas.Left="264" Canvas.Top="209" Checked="radIconD2_Checked"/>
+                <Image x:Name="imgIconPreview_D2X" Height="37" Canvas.Left="284" Canvas.Top="238" Width="37" Source="img/icons/icon_d2x.png"/>
+                <RadioButton x:Name="radIconD2X" Content="" GroupName="d2icon" Canvas.Left="264" Canvas.Top="248" Checked="radIconD2X_Checked"/>
+            </Canvas>
+        </Viewbox>
+    </Grid>
+</UserControl>

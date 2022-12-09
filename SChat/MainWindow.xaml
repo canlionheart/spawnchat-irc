@@ -1,0 +1,31 @@
+﻿<Window x:Class="SChat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SpawnChat" Height="320.333" Width="240.5" FontFamily="Verdana" Icon="img/icons/schaticon.png" Background="#FFE6E6E6" Closed="Window_Closed" >
+    <Grid Margin="0,0,0,-12" HorizontalAlignment="Left" Width="230">
+       
+        <Canvas Margin="0,0,-10,0">
+            <Button x:Name="btnOK" Content="OK" HorizontalAlignment="Left" Margin="123,224,0,0" VerticalAlignment="Top" Width="93" Height="37" Click="btnOK_Click" Grid.ColumnSpan="2"/>
+            <ComboBox x:Name="cboxServer" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" Width="108" SelectionChanged="cboxServer_SelectionChanged" IsEditable="True"/>
+            <Label x:Name="lblUser" Content="Username:&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" Height="26" RenderTransformOrigin="0.636,-0.115"/>
+            <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="22" Margin="10,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108" MaxLength="15"/>
+            <Label x:Name="lblServer" Content="Gateway:&#xA;" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Height="26" RenderTransformOrigin="0.449,0.444"/>
+            <ComboBox x:Name="cboxGame" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Width="76" SelectedIndex="0" SelectionChanged="cboxGame_SelectionChanged" FontFamily="Verdana">
+                <ComboBoxItem Content="DRTL" HorizontalAlignment="Left" Width="92"/>
+            </ComboBox>
+            <Label x:Name="lblClient" Content="Client:&#xA;" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Height="26"/>
+            <Label x:Name="lblChan" Content="Channel:&#xA;" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Height="26" RenderTransformOrigin="0.636,-0.115"/>
+            <TextBox x:Name="txtChan" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" MaxLength="22" Canvas.Left="29" Canvas.Top="191" VerticalContentAlignment="Center"/>
+            <Button x:Name="btnExit" Content="EXIT" HorizontalAlignment="Left" Margin="12,224,0,0" VerticalAlignment="Top" Width="106" Height="37" Click="btnExit_Click"/>
+            <Label x:Name="lblKeyExit" Content="_" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-2.296,3.16" MouseUp="btnExit_Click" Canvas.Left="54" Canvas.Top="230"/>
+            <Label x:Name="lblVersion" Content="Beta v0.10" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="77" Grid.ColumnSpan="2" Canvas.Left="134" Canvas.Top="261"/>
+            <CheckBox x:Name="chkNickServ" Content="NickServ" HorizontalAlignment="Left" Margin="123,8,0,0" VerticalAlignment="Top" Width="82" Grid.ColumnSpan="2" Checked="chkNickServ_Checked" Unchecked="chkNickServ_Unchecked" />
+            <Label x:Name="lblNSname" Content="Bot name:&#xA;" HorizontalAlignment="Left" Margin="123,76,0,0" VerticalAlignment="Top" Height="26" RenderTransformOrigin="0.636,-0.115" Width="82" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="txtNSname" HorizontalAlignment="Left" Height="22" Margin="123,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="93" MaxLength="13" Grid.ColumnSpan="2" Text="NickServ" IsEnabled="False"/>
+            <Label x:Name="lblNSpass" Content="Password:&#xA;" HorizontalAlignment="Left" Margin="123,29,0,0" VerticalAlignment="Top" Height="26" RenderTransformOrigin="0.636,-0.115" Width="70"/>
+            <PasswordBox x:Name="pboxNSpass" HorizontalAlignment="Left" Margin="123,54,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="93" IsEnabled="False"/>
+            <CheckBox x:Name="chkRememberPass" Content="CheckBox" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="18" ToolTip="Remember" Canvas.Left="193" Canvas.Top="34" IsEnabled="False"/>
+            <Label x:Name="lblChanSymbol" Content="#&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" RenderTransformOrigin="0.636,-0.115" Canvas.Left="10" Canvas.Top="187" FontSize="16"/>
+        </Canvas>
+    </Grid>
+</Window>
